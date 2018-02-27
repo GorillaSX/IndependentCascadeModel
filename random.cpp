@@ -1,0 +1,14 @@
+//a declare of a function used to declare random number
+#include <cstdlib>
+#include <iostream>
+using namespace std;
+template<typename T>
+T random(T min, T max)
+{
+	return (min + static_cast<T>((max - min) * ((rand() % 1001) / (double)1000))); //closed interval between min and max
+}
+int main(void)
+{
+	int man = random<int>(0,999);
+	cout<< man << endl;
+}
